@@ -10,11 +10,32 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose Network"
-        android:id="@+id/button_choose_network"
+        android:text="Show Networks"
+        android:id="@+id/button_show_networks"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="chooseNetwork" />
+        android:onClick="showNetworks" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a network below : "
+        android:id="@+id/textView_choose_network"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button_show_networks"
+        android:layout_toEndOf="@+id/button_show_networks"
+        android:paddingLeft="5dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_networks"
+        android:layout_toRightOf="@+id/button_show_networks"
+        android:layout_toEndOf="@+id/button_show_networks"
+        android:layout_below="@+id/textView_choose_network"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:fadeScrollbars="false" />
 
 </RelativeLayout>
